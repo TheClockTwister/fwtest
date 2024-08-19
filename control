@@ -1,0 +1,7 @@
+Package: fwtest
+Version: 0.1.0
+Section: base
+Priority: optional
+Architecture: {{ARCH}}
+Maintainer: TheClockTwister
+Description: A tool for evaluating NAT and filter rules of firewalls.

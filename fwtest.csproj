@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    
+    <!-- Add trimming but do not force packages to perform it. Only those who opted-in to trimming -->
+    <PublishTrimmed>true</PublishTrimmed>
+    <TrimMode>partial</TrimMode>
+    <!-- Do not trim dynamic JSON serialization -->
+    <!-- <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault> -->
+    <!-- Move Symbols from the final assemblies into PDB files -->
+    <TrimmerRemoveSymbols>true</TrimmerRemoveSymbols>
+
+    <!-- 👇 Using invariant globalization reduces app sizes -->
+    <InvariantGlobalization>true</InvariantGlobalization>
+    
+    <!-- Inject the .NET dependencies so the application is standalone -->
+    <PublishSelfContained>true</PublishSelfContained>
+
+    <!-- Include all runtime libraries in the executable -->
+    <PublishSingleFile>true</PublishSingleFile>
+
+    <!-- Generate IL code and native code to improve performance and latency -->
+    <PublishReadyToRun>true</PublishReadyToRun>
+
+    <!-- 👇 Enables always publishing as AOT -->
+    <!-- <PublishAot>true</PublishAot> -->
+    
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.9.1" />
+  </ItemGroup>
+
+</Project>

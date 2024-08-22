@@ -6,6 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
     
     <!-- Add trimming but do not force packages to perform it. Only those who opted-in to trimming -->
     <PublishTrimmed>true</PublishTrimmed>
